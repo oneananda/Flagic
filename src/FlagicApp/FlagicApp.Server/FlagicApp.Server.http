@@ -1,0 +1,6 @@
+@FlagicApp.Server_HostAddress = http://localhost:5083
+
+GET {{FlagicApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
