@@ -39,10 +39,10 @@ Flagic (Flag + Magic = Feature Flag Managment like Magic :) ) is an open source 
 Flagic is designed with a modular architecture to support scalability and ease of maintenance:
 
 - **Frontend:**  
-  A responsive web dashboard built using modern JavaScript frameworks (such as React, Vue, or Angular) that provides an intuitive interface for managing configurations and monitoring project statuses.
+  A responsive web dashboard built using modern JavaScript framework React that provides an intuitive interface for managing configurations and monitoring project statuses.
 
 - **Backend API:**  
-  A robust API layer (built with your choice of backend framework) handling business logic, authentication, and secure integration with cloud vault services.
+  A robust API layer using **asp.net cor web api** handling business logic, authentication, and secure integration with cloud vault services.
 
 - **Database:**  
   A scalable data store for persisting configuration data, audit logs, and user information.
@@ -50,3 +50,4 @@ Flagic is designed with a modular architecture to support scalability and ease o
 - **Cloud Vault Integrations:**  
   Pluggable modules that allow for secure connectivity to various cloud vault providers for managing secrets.
 
+---
