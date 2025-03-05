@@ -1,6 +1,6 @@
 # Flagic
 
-Flagic is an open source web application that provides a comprehensive solution for feature flag management and remote configuration. It offers a centralized dashboard to manage projects, environments, and secure cloud vault integrations, empowering teams to control and roll out features dynamically across various stages of development.
+Flagic (Flag + Magic = Feature Flag Managment like Magic :) ) is an open source web application that provides a comprehensive solution for feature flag management and remote configuration. It offers a centralized dashboard to manage projects, environments, and secure cloud vault integrations, empowering teams to control and roll out features dynamically across various stages of development.
 
 ## Table of Contents
 
