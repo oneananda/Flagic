@@ -17,7 +17,8 @@ namespace FlagicApp.Server.Services
 
         public IEnumerable<User> GetAllUsers()
         {
-            throw new NotImplementedException();
+            User user = new User() { Id = 1 };
+            return new List<User> { user };
         }
 
         public User GetUserById(int id)

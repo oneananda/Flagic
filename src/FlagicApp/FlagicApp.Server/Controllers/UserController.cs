@@ -1,30 +1,31 @@
 ﻿using FlagicApp.Server.Interfaces;
 using FlagicApp.Server.Models;
+using FlagicApp.Server.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FlagicApp.Server.Controllers
 {
     [ApiController]
-    [Route("[controller]")]    
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        //private readonly List<User> _users = new List<User>();
         //private int _nextId = 1;
 
         private readonly ILogger<UserController> _logger;
 
         // Injecting the user service via constructor
-        public UserController(ILogger<UserController> logger)
+        public UserController(IUserService userService, ILogger<UserController> logger)
         {
+            _userService = userService;
             _logger = logger;
         }
 
-        //public IEnumerable<User> GetAllUsers()
-        //{
-        //    return _users;
-        //}
+        public IEnumerable<User> GetAllUsers()
+        {
+            return _userService.GetAllUsers();
+        }
         //public User GetUserById(int id)
         //{
         //    return _users.FirstOrDefault(u => u.Id == id);
