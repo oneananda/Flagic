@@ -45,11 +45,33 @@ function App() {
             {contents}
         </div>
     );
+    //async function populateWeatherData2() {
+    //    const response = await fetch('weatherforecast');
+    //    const data = await response.json();
+    //    setForecasts(data);
+    //}
 
     async function populateWeatherData() {
         const response = await fetch('weatherforecast');
-        const data = await response.json();
-        setForecasts(data);
+
+        if (!response.ok) {
+            console.error("Network response was not ok");
+            return;
+        }
+
+        // Optionally, read the response as text first to inspect its contents
+        const text = await response.text();
+        if (!text) {
+            console.error("Response is empty");
+            return;
+        }
+
+        try {
+            const data = JSON.parse(text);
+            setForecasts(data);
+        } catch (error) {
+            console.error("Failed to parse JSON:", error, text);
+        }
     }
 }
 
