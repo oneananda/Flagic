@@ -1,4 +1,7 @@
 
+using FlagicApp.Server.Interfaces;
+using FlagicApp.Server.Services;
+
 namespace FlagicApp.Server
 {
     public class Program
@@ -7,6 +10,7 @@ namespace FlagicApp.Server
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddScoped<IUserService,UserService>();
             // Add services to the container.
 
             builder.Services.AddControllers();

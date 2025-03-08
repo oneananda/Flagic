@@ -21,7 +21,7 @@ namespace FlagicApp.Server.Controllers
             _userService = userService;
             _logger = logger;
         }
-
+        [HttpGet(Name = "GetAllUsers")]
         public IEnumerable<User> GetAllUsers()
         {
             return _userService.GetAllUsers();
